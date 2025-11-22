@@ -10,8 +10,6 @@ const nextConfig: NextConfig = {
       { protocol: 'http', hostname: '**' },
     ],
   },
-  output: "standalone", 
-  outputFileTracingRoot: path.resolve(__dirname, '../../'),
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -25,6 +23,7 @@ const nextConfig: NextConfig = {
       }
     }
   }
+  // 🔹 Do NOT set `output` or `standalone` in static mode
 };
 
 export default nextConfig;
